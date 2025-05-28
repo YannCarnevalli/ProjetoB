@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /*RESET BÁSICO*/
 *{
     margin:0;
@@ -5,6 +6,7 @@
     box-sizing: border-box;
 }
 body{
+     font-family: "Roboto", sans-serif;
     background: #f4f4f4;
 }
 #container{
@@ -109,8 +111,47 @@ footer {
 .footer-content li {
     margin-bottom: 5px;
 }
+
 .footer-content a {
     color: #ffff;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Responsividade */ 
+
+@media (max-width: 768px){
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    header nav ul li {
+        width: 300px;
+        height: 50px;
+        text-align: center;
+        border-radius: 40px;
+        font-size: 1.3rem;
+        background-image: linear-gradient(green, black);
+    }
+    header nav ul li a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    #conteudo {
+        grid-template-columns: 1fr;
+    }
+    aside {
+        display: none;
+    }
+    .footer-content {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        max-width: 100%;
+    }
 }
